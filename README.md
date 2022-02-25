@@ -24,5 +24,5 @@ This should suffice as a living "word doc" for CSC500 class assignments
 ### Critical Thinking Assignment 8
 
 ## Portfolio Projects
-See [Portfolio_Project.md] for details on the portfolio project
+See [Portfolio_Project.md](Portfolio_Project.md) for details on the portfolio project
 
