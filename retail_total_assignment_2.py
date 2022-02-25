@@ -22,7 +22,7 @@ def main():
 	price_return = get_total(my_items)
 
 	for key, val in price_return.items():
-		print(key,": $",val)
+		print(key,": $",round(val,2))
 
 if __name__ == "__main__":
 	main()
