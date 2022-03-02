@@ -1,6 +1,13 @@
 def main():
 
-	num_books = int(input("Number of books you have purchased this month: "))
+
+	s_num_books = input("Number of books you have purchased this month: ")
+	try:
+		num_books = int(s_num_books)
+	except:
+		print("String given in input was not an int, please try with an int!")
+		exit()
+
 	num_points = 0
 	if num_books == 0:
 		num_points = 0
