@@ -14,6 +14,7 @@ This should suffice as a living "word doc" for CSC500 class assignments
 ### Critical Thinking Assignment 3
 
 [Assignment 3 code](alarm_time_assignment_3.py)
+![Assignment 3](./images/Sikora_Assignment_3_alarm_clock.png)
 
 ### Critical Thinking Assignment 4
 
