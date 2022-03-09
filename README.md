@@ -19,6 +19,7 @@ This should suffice as a living "word doc" for CSC500 class assignments
 ### Critical Thinking Assignment 4
 
 [Assignment 4 code](rainfall_assignment_4.py)
+![Assignment 4](./images/Sikora_Assignment_4_rainfall.png)
 
 ### Critical Thinking Assignment 5
 
