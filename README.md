@@ -24,6 +24,7 @@ This should suffice as a living "word doc" for CSC500 class assignments
 ### Critical Thinking Assignment 5
 
 [Assignment 5 code](book_club_assingment_5.py)
+![Assignment 5](./images/Sikora_Assignment_5_option_2.png)
 
 ### Critical Thinking Assignment 6
 

@@ -11,6 +11,8 @@ def main():
 	num_points = 0
 	if num_books == 0:
 		num_points = 0
+	elif num_books%2 and num_books < 8:
+		num_points = "Sorry bookstore doesn't give points for odd amount of books purchased!"
 	elif num_books == 2:
 		num_points = 5
 	elif num_books == 4:
