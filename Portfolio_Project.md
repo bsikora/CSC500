@@ -7,6 +7,7 @@ This should suffice as a living "word doc" for CSC500 porfolio project
 
 ## Milestone 2
 [Second milestone code (module 6 milestone)](o1_portfolio_milestone_6.py)
+![Second milestone code](./images/Sikora_portfolio_milestone_2.png)
 
 ## Final Project
 [Final code (module 8 project)](o1_portfolio_8.py)
