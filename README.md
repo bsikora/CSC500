@@ -29,7 +29,7 @@ This should suffice as a living "word doc" for CSC500 class assignments
 ### Critical Thinking Assignment 6
 
 [Assignment 6 code](o2_course_info_assignment_6.py)
-![Assignment 6](./Sikora_Assignment_6_option_2.png)
+![Assignment 6](./images/Sikora_Assignment_6_option_2.png)
 
 ## Portfolio Projects
 See [Portfolio_Project.md](Portfolio_Project.md) for details on the portfolio project
