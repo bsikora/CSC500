@@ -11,5 +11,7 @@ This should suffice as a living "word doc" for CSC500 porfolio project
 
 ## Final Project
 [Final code (module 8 project)](o1_portfolio_8.py)
+
 ![Final Project Code](./images/Sikora_portfolio_1_of_2.png)
+
 ![Final Project Code2](./images/Sikora_portfolio_2_of_2.png)
