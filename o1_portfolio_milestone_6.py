@@ -22,7 +22,7 @@ class ShoppingCart():
     def remove_item(self, item_name):
         for i,c in enumerate(self.cart_items):
             if item_name == c.item_name:
-                del c[i]
+                del self.cart_items[i]
                 return
         print("Item not found in cart")
 

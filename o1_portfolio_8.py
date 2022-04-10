@@ -7,14 +7,23 @@ class ItemToPurchase():
         self.item_description = item_description
 
     def print_item_cost(self):
-        print(self.item_name, str(self.item_quantity),"@ $" + str(self.item_price), 
-            "=  $" + str(self.item_price*self.item_quantity))
+        print(self.item_name, str(self.item_quantity),"@ $", f"{self.item_price:.2f}", 
+            "=  $", f"{(self.item_price*self.item_quantity):.2f}")
 
 class ShoppingCart():
     def __init__(self, customer_name = "none", current_date = "January 1, 2020"):
         self.customer_name = customer_name
         self.current_date = current_date
         self.cart_items = []
+
+    def item_exists(self, item_name):
+        for c in self.cart_items:
+            if item_name == c.item_name:
+                return True
+
+        print("Item", item_name, "not found in cart")
+        return False
+
 
     def add_item(self, i_t_p):
         self.cart_items.append(i_t_p)
@@ -24,22 +33,15 @@ class ShoppingCart():
             if item_name == c.item_name:
                 del self.cart_items[i]
                 return
-        print("Item not found in cart")
+        print("Item", item_name, "not found in cart")
 
     def modify_item(self, i_t_p):
         for c in self.cart_items:
             if i_t_p.item_name == c.item_name:
-                if c.item_name == "none":
-                    c.item_name = i_t_p.item_name
-                if c.item_price == 0:
-                    c.item_price = i_t_p.item_price
-                if c.item_quantity == 0:
-                    c.item_quantity = i_t_p.item_quantity
-                if not c.item_description:
-                    c.item_description = i_t_p.item_description
-                return
+                c.item_quantity = i_t_p.item_quantity
+                return 
                                
-        print("Item not found in cart.")
+        print("Item", i_t_p.item_name, "not found in cart.")
 
     def get_num_items_in_cart(self):
         return len(self.cart_items)
@@ -56,10 +58,10 @@ class ShoppingCart():
         for i in self.cart_items:
             i.print_item_cost()
         if not self.cart_items:
-            print("SHOPPING CART IS EMPTY")
+            print("SHIPPING CART IS EMPTY")
             return
 
-        print("Total:","$"+str(self.get_cost_of_cart()))
+        print("Total:","$"+f"{self.get_cost_of_cart():.2f}")
 
     def print_descriptions(self):
         print(self.customer_name +"'s Shopping Cart -",self.current_date)
@@ -114,19 +116,21 @@ def print_menu(sc):
             print("REMOVE ITEM FROM CART")
             print("Enter name of item to remove:")
             item_name = input()
-            sc.remove_item(item_name)
+            if(sc.item_exists(item_name)):
+                sc.remove_item(item_name)
         elif choice == "c":
             print("CHANGE ITEM QUANTITY")
             print("Enter the item name:")
             item_name = input()
-            print("Enter the new quantity:")
-            try:
-                new_quantity = int(input())
-            except:
-                print("Needs to be an int")
-                exit()
-            itm = ItemToPurchase(item_name = item_name, item_quantity = new_quantity)
-            sc.modify_item(itm)
+            if(sc.item_exists(item_name)):
+                print("Enter the new quantity:")
+                try:
+                    new_quantity = int(input())
+                except:
+                    print("Needs to be an int")
+                    return
+                itm = ItemToPurchase(item_name = item_name, item_quantity = new_quantity)
+                sc.modify_item(itm)
         else:
             print(choice,"is not a valid choice!")
 
